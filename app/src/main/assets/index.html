@@ -2959,9 +2959,6 @@ body.light-mode .drawer-user-email {
         <span id="topFilterBadge" style="display:none;position:absolute;top:0;right:0;background:#e50914;color:#fff;font-size:10px;font-weight:bold;width:15px;height:15px;border-radius:50%;align-items:center;justify-content:center;line-height:1">0</span>
       </button>
     </div>
-    <button id="topHhBtn" onclick="window.openHhFolderModal()" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#e50914,#b80710);color:#fff;border:none;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;box-shadow:0 3px 10px rgba(229,9,20,0.5);transition:transform 0.2s" title="مجلد hh">
-      <span style="font-size:15px">📁</span> <span>مجلد hh</span>
-    </button>
     <button id="topDrawerBtn" class="top-drawer-btn" onclick="openDrawer()" title="القائمة الجانبية" aria-label="القائمة الجانبية">
         <div id="topAvatarCircle" style="display:none;width:30px;height:30px;border-radius:50%;background:#e50914;color:#fff;font-size:13px;font-weight:900;align-items:center;justify-content:center;overflow:hidden;border:1.5px solid #fff"></div>
         <svg id="topHamburgerSvg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -2971,22 +2968,6 @@ body.light-mode .drawer-user-email {
         </svg>
       </button>
   </header>
-
-  <div id="hhBanner" style="margin-top:60px;margin-bottom:10px;padding:12px 16px;background:linear-gradient(135deg,#1c1c1c,#121212);border:1px solid #333;border-right:4px solid #e50914;border-radius:12px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 15px rgba(0,0,0,0.5)">
-    <div style="display:flex;align-items:center;gap:10px;cursor:pointer" onclick="window.openHhFolderModal()">
-      <span style="font-size:26px">📁</span>
-      <div>
-        <div style="font-size:14px;font-weight:bold;color:#fff">مجلد hh (تطبيق APK)</div>
-        <div style="font-size:11px;color:#aaa">app-debug.apk • 31 MB • جاهز للتثبيت</div>
-      </div>
-    </div>
-    <div style="display:flex;gap:6px">
-      <button onclick="window.openHhFolderModal()" style="background:#2a2a2a;color:#eee;border:1px solid #444;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:bold;cursor:pointer">تفاصيل</button>
-      <a href="hh/app-debug.apk" download="app-debug.apk" style="background:#e50914;color:#fff;text-decoration:none;padding:6px 12px;border-radius:8px;font-size:12px;font-weight:bold;display:inline-flex;align-items:center;gap:4px">
-        <span>⬇️</span><span>تحميل</span>
-      </a>
-    </div>
-  </div>
 
   <main id="main-content">
     <div style="padding:60px;text-align:center;color:#555">⏳ تحميل...</div>
@@ -3053,68 +3034,12 @@ body.light-mode .drawer-user-email {
         <span class="drawer-icon">⚙️</span>
         <span class="drawer-label">الإعدادات</span>
       </div>
-      <div class="drawer-item" onclick="closeDrawer(); window.openHhFolderModal();" style="color:#ff4d4d">
-        <span class="drawer-icon">📁</span>
-        <span class="drawer-label" style="font-weight:bold">مجلد hh (تطبيق APK)</span>
-      </div>
       <div class="drawer-item" id="drawerAccountItem" onclick="navFromDrawer('account')">
         <span class="drawer-icon">🔑</span>
         <span id="drawerAccountItemLabel" class="drawer-label">الحساب</span>
       </div>
     </div>
   </aside>
-
-  <!-- Modal: مجلد hh -->
-  <div id="hhFolderModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);z-index:99999;align-items:center;justify-content:center;padding:16px" onclick="if(event.target===this)window.closeHhFolderModal()">
-    <div style="background:#1a1a1a;border:1px solid #333;border-radius:14px;max-width:440px;width:100%;padding:22px;color:#fff;direction:rtl;box-shadow:0 8px 32px rgba(0,0,0,0.85);position:relative">
-      <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #333;padding-bottom:12px;margin-bottom:14px">
-        <div style="display:flex;align-items:center;gap:10px">
-          <span style="font-size:26px">📁</span>
-          <div>
-            <h3 style="margin:0;font-size:18px;color:#fff">مجلد hh</h3>
-            <span style="font-size:11px;color:#aaa">حزمة تطبيق أندرويد (APK)</span>
-          </div>
-        </div>
-        <button onclick="window.closeHhFolderModal()" style="background:none;border:none;color:#aaa;font-size:22px;cursor:pointer;padding:4px">✕</button>
-      </div>
-      <div style="background:#111;border:1px solid #282828;border-radius:10px;padding:14px;margin-bottom:14px">
-        <div style="font-weight:bold;font-size:13px;margin-bottom:8px;color:#e50914">📄 محتويات مجلد hh:</div>
-        <div style="font-size:13px;color:#eee;padding:4px 0;display:flex;justify-content:space-between">
-          <span>📦 <b>app-debug.apk</b></span>
-          <span style="color:#aaa">31 MB</span>
-        </div>
-        <div style="font-size:13px;color:#bbb;padding:4px 0;display:flex;justify-content:space-between">
-          <span>📝 <b>README.md</b></span>
-          <span style="color:#888">ملف توضيحي</span>
-        </div>
-        <div style="font-size:13px;color:#bbb;padding:4px 0;display:flex;justify-content:space-between">
-          <span>ℹ️ <b>info.txt</b></span>
-          <span style="color:#888">معلومات النسخة</span>
-        </div>
-      </div>
-      <div style="font-size:12px;color:#aaa;margin-bottom:18px;line-height:1.6">
-        تم تجهيز وبناء تطبيق <b>Black Anime</b> بنجاح داخل مجلد <b>hh</b>. يمكنك النقر على الزر أدناه لتحميل ملف الـ APK وتثبيته مباشرة.
-      </div>
-      <div style="display:flex;gap:10px">
-        <a href="hh/app-debug.apk" download="app-debug.apk" style="flex:1;text-align:center;background:linear-gradient(135deg,#e50914,#b80710);color:#fff;text-decoration:none;font-weight:bold;padding:12px 16px;border-radius:8px;font-size:14px;display:inline-block;box-shadow:0 3px 10px rgba(229,9,20,0.5)">
-          ⬇️ تحميل ملف APK (31 MB)
-        </a>
-        <button onclick="window.closeHhFolderModal()" style="background:#333;color:#fff;border:none;padding:12px 18px;border-radius:8px;font-size:14px;cursor:pointer">
-          إغلاق
-        </button>
-      </div>
-    </div>
-  </div>
-  <script>
-    window.openHhFolderModal = function() {
-      var m = document.getElementById('hhFolderModal');
-      if (m) m.style.display = 'flex';
-    };
-    window.closeHhFolderModal = function() {
-      var m = document.getElementById('hhFolderModal');
-      if (m) m.style.display = 'none';
-    };
-  </script>
 
   <!-- Professional Firebase Auth Modal (Sign In / Register / Reset Password) -->
   <div id="authModalOverlay" class="auth-modal-overlay" onclick="handleAuthOverlayClick(event)">
